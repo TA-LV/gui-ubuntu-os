@@ -95,7 +95,7 @@ spinner "${b}[${g}*${b}]${c} Cleaning termux environment${g}....." "dpkg --confi
 sleep 1
 
 
-spinner "yes | termux-setup-storage" "${b}[${g}*${b}]${c} Setting up storage${g}....." 
+yes | termux-setup-storage
 spinner "${b}[${g}*${b}]${c} Installing packages${g}....." "yes | apt update  && yes | apt install proot-distro && yes | apt install x11-repo  && yes | apt install termux-x11-nightly && yes | apt install x11-repo "
 sleep 1
 
