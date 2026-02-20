@@ -93,12 +93,12 @@ done
 printf "$r"
 spinner "${b}[${g}*${b}]${c} Cleaning termux environment${g}....." "dpkg --configure -a && apt --fix-broken install && sleep 5"
 sleep 1
-banner
 
-yes | termux-setup-storage
+
+spinner "yes | termux-setup-storage" "${b}[${g}*${b}]${c} Setting up storage${g}....." 
 spinner "${b}[${g}*${b}]${c} Installing packages${g}....." "yes | apt update  && yes | apt install proot-distro && yes | apt install x11-repo  && yes | apt install termux-x11-nightly && yes | apt install x11-repo "
 sleep 1
-banner
+
 printf "${b}[${g}*${b}]${g} Installing distro${g}.....${r}\n"
 proot-distro install ubuntu
 banner
