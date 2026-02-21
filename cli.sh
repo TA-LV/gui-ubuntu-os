@@ -5,12 +5,12 @@ r='\e[0m'      # Reset
 y='\e[1;33m'   # Yellow
 c='\e[1;96m'   # Light cyan
 ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
-banner(){
-clear
-printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
-printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
-printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
-printf "\e[1;92m         GUI-UBUNTU-OS\n\n\e[0m"
+ banner() {
+    clear                                                                   # Box is exactly 29 characters wide                                     printf "${b}▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n"                            printf "${b}▌${g}█ █ █▀▀█ █ █ █▀▀▄ ▀▀█▀▀ █ █${b}▐\n"
+    printf "${b}▌${g}█ █ █▀▀▄ █ █ █  █   █   █ █${b}▐\n"                    printf "${b}▌${g}▀▀▀ ▀▀▀▀ ▀▀▀ ▀  ▀   ▀   ▀▀▀${b}▐\n"
+    printf "${b}▌                           ${b}▐\n"
+    printf "${b}▌      ${g}GUI-UBUNTU-OS        ${b}▐\n"
+    printf "${b}▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟${r}\n\n"
 }
 finish(){
 printf "${b}[${g}*${b}]${g} Ubuntu installed! ${r}\n"
