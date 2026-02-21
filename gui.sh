@@ -4,19 +4,14 @@ b='\e[34m'
 r='\e[0m'
 y='\e[1;33m'
 c='\e[1;96m'
-banner(){
-clear
-
-printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
-
-printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
-
-printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
-
-printf "\e[1;92m         GUI-UBUNTU-OS\n\n\e[0m"
-
+ 
+banner() {
+    clear                                                                   # Box is exactly 29 characters wide                                     printf "${b}▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n"                            printf "${b}▌${g}█ █ █▀▀█ █ █ █▀▀▄ ▀▀█▀▀ █ █${b}▐\n"
+    printf "${b}▌${g}█ █ █▀▀▄ █ █ █  █   █   █ █${b}▐\n"                    printf "${b}▌${g}▀▀▀ ▀▀▀▀ ▀▀▀ ▀  ▀   ▀   ▀▀▀${b}▐\n"
+    printf "${b}▌                           ${b}▐\n"
+    printf "${b}▌      ${g}GUI-UBUNTU-OS        ${b}▐\n"
+    printf "${b}▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟${r}\n\n"
 }
-
 check_internet() {
     TARGET_URL="https://github.com/rbasry29-blip/gui-ubuntu-os"
 
