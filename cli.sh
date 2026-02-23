@@ -2,7 +2,11 @@
 g='\e[1;92m'   # Green
 b='\e[34m'     # Blue
 r='\e[0m'      # Reset
-y='\e[1;33m'   # Yellow                                                                                                                         c='\e[1;96m'   # Light cyan
+y='\e[1;33m'   # Yellow
+c='\e[1;96m'   # Light cyan
+
+
+
 ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
   #!/bin/bash
 
