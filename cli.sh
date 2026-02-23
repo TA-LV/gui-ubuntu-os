@@ -108,9 +108,10 @@ check_internet() {
 software(){
 LINES=(
   "${b}[${g}*${b}]${c} Welcome"
-  "${b}[${g}*${b}]${c} your work will easier"
-  "${b}[${g}*${b}]${c} get started!"
-  "${b}[${g}*${b}]${c} gui-ubuntu-os"
+  "${b}[${g}*${b}]${c} Wish your work will easier"
+  "${b}[${g}*${b}]${c} lets's get started!"
+  "${b}[${g}*${b}]${c} Enjoy gui-ubuntu-os"
+"${b}[${g}*${b}]${c} Support : If it helped you,  please give a star to this repo. Your star keeps repo alive.
 )
 
 for t in "${LINES[@]}"; do
