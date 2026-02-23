@@ -5,14 +5,43 @@ r='\e[0m'      # Reset
 y='\e[1;33m'   # Yellow
 c='\e[1;96m'   # Light cyan
 ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
- banner() {
-    clear                                                                   # Box is exactly 29 characters wide                                     printf "${b}▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n"                            printf "${b}▌${g}█ █ █▀▀█ █ █ █▀▀▄ ▀▀█▀▀ █ █${b}▐\n"
-    printf "${b}▌${g}█ █ █▀▀▄ █ █ █  █   █   █ █${b}▐\n"                    printf "${b}▌${g}▀▀▀ ▀▀▀▀ ▀▀▀ ▀  ▀   ▀   ▀▀▀${b}▐\n"
+  #!/bin/bash
+
+# Color Definitions
+b='\e[1;34m' # Blue Border
+g='\e[1;32m' # Light Green Text
+r='\e[0m'    # Reset
+
+banner() {
+    clear
+    # Box is exactly 29 characters wide
+    printf "${b}▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n"
+
+
+    printf "${b}▌${g}█ █ █▀▀█ █ █ █▀▀▄ ▀▀█▀▀ █ █${b}▐\n"
+
+
+    printf "${b}▌${g}█ █ █▀▀▄ █ █ █  █   █   █ █${b}▐\n"
+
+
+    printf "${b}▌${g}▀▀▀ ▀▀▀▀ ▀▀▀ ▀  ▀   ▀   ▀▀▀${b}▐\n"
+
+
     printf "${b}▌                           ${b}▐\n"
+
+
     printf "${b}▌      ${g}GUI-UBUNTU-OS        ${b}▐\n"
+
+
     printf "${b}▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟${r}\n\n"
+
+
 }
+
+
 info()     { printf "${b}[${g}*${b}] ${c}%s${reset}\n" "$1"; }
+
+
 finish(){
 printf "${b}[${g}*${b}]${g} Ubuntu installed! ${r}\n"
 printf "${b}[${g}*${b}]${g} Run ${y} ubuntu ${g} to get Ubuntu cli ${r}\n"
