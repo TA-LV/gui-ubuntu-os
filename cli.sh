@@ -1,9 +1,8 @@
- #!/bin/bash
+#!/bin/bash
 g='\e[1;92m'   # Green
 b='\e[34m'     # Blue
 r='\e[0m'      # Reset
-y='\e[1;33m'   # Yellow
-c='\e[1;96m'   # Light cyan
+y='\e[1;33m'   # Yellow                                                                                                                         c='\e[1;96m'   # Light cyan
 ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
   #!/bin/bash
 
@@ -107,11 +106,11 @@ check_internet() {
 }
 software(){
 LINES=(
-  "${b}[${g}*${b}]${c} Welcome"
-  "${b}[${g}*${b}]${c} Wish your work will easier"
-  "${b}[${g}*${b}]${c} lets's get started!"
-  "${b}[${g}*${b}]${c} Enjoy gui-ubuntu-os"
-"${b}[${g}*${b}]${c} Support : If it helped you,  please give a star to this repo. Your star keeps repo alive.
+  "    Welcome"
+  "    Wish your work will easier"
+  "    lets's get started!"
+  "    Enjoy gui-ubuntu-os"
+  "    Support : If it helped you,  please give a star to this repo. Your star keeps repo alive."
 )
 
 for t in "${LINES[@]}"; do
@@ -124,7 +123,7 @@ for t in "${LINES[@]}"; do
   sleep 2
 done
 printf "$r"
-spinner "${b}[${g}*${b}]${c} Cleaning termux environment${g}....." "dpkg --configure -a && apt --fix-broken install && sleep 5"
+spinner "${b}[${g}*${b}]${c} Cleaning termux environment${g}....." "dpkg --configure -a ; apt --fix-broken install ; sleep 5"
 sleep 1
 
 
