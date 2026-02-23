@@ -48,6 +48,8 @@ printf "${b}[${g}*${b}]${g} Run ${y} ubuntu ${g} to get Ubuntu cli ${r}\n"
 printf "${b}[${g}*${b}]${g} If you want GUI , Then run ${r}\n"
 printf "${b}[${g}*${b}]${y} ./gui.sh ${r}\n"
 }
+
+
 check_ubuntu_installed() {
     if [[ -d "$ubuntu_path" ]]; then
         printf "${b}[${g}!${b}]${c} Distro already available , skipping progress.${r}\n"
@@ -105,10 +107,10 @@ check_internet() {
 }
 software(){
 LINES=(
-  "Welcome"
-  "Wish your work will easier"
-  "Let's get started!"
-  "Enjoy gui-ubuntu-os"
+  "${b}[${g}*${b}]${c} Welcome"
+  "${b}[${g}*${b}]${c} your work will easier"
+  "${b}[${g}*${b}]${c} get started!"
+  "${b}[${g}*${b}]${c} gui-ubuntu-os"
 )
 
 for t in "${LINES[@]}"; do
