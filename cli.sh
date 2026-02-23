@@ -12,6 +12,7 @@ ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
     printf "${b}▌      ${g}GUI-UBUNTU-OS        ${b}▐\n"
     printf "${b}▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟${r}\n\n"
 }
+info()     { printf "${b}[${g}*${b}] ${c}%s${reset}\n" "$1"; }
 finish(){
 printf "${b}[${g}*${b}]${g} Ubuntu installed! ${r}\n"
 printf "${b}[${g}*${b}]${g} Run ${y} ubuntu ${g} to get Ubuntu cli ${r}\n"
@@ -138,6 +139,7 @@ EOF
 chmod +x $PREFIX/bin/ubuntu
 }
 banner
+info "Copyright (c) 2026 rbasry29-blip"
 check_internet
 check_ubuntu_installed
 printf "$c"
