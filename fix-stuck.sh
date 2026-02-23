@@ -50,10 +50,6 @@ proot-distro login ubuntu -- dpkg --configure -a
 proot-distro login ubuntu -- apt --fix-broken install -y
 
 
-clear
-printf "\e[1;33m    _  _ ___  _  _ _  _ ___ _  _\n"
-printf "\e[1;96m    |  | |__] |  | |\\ |  |  |  |\n"
-printf "\e[1;92m    |__| |__] |__| | \\|  |  |__|\n"
-printf "\e[1;92m     PROOT-DISTRO-UBUNTU\n\n\e[0m"
+
 
 printf "${b}[${g}*${b}]${c} Problem sloved!  Now run ${y} ./gui.sh ${r}\n"
