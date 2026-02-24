@@ -44,7 +44,7 @@ first install two apps
 
 
 2 Termux-x11 from 
-[HERE](https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk)
+[HERE](https://github.com/termux/termux-x11/releases/download/nightly/app-universal-debug.apk)
 
 
 3.Gboard from [Google play ](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)
