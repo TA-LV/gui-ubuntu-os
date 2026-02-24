@@ -141,6 +141,17 @@ Enjoy
 ## ⭐ Support
 *If this helped you, please give a star ⭐❤️‍🔥  
 Your support keeps the project alive 🚀*
+
+## Credit
+This project utilizes proot-distro for managing and installing Linux distributions inside Termux.
+
+proot-distro is an official project maintained by the Termux development team and is licensed under its respective open-source license.
+
+Full credit for proot-distro goes to its original authors and contributors:
+https://github.com/termux/proot-distro
+
+This repository does not claim ownership of proot-distro and only uses it as a dependency.
+
 # Stuck problem
 
 If you stuck on 
