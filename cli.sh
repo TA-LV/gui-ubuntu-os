@@ -174,7 +174,7 @@ EOF
 chmod +x $PREFIX/bin/ubuntu
 }
 banner
-info "Copyright (c) 2026 rbasry29-blip"
+info "Copyright (c) 2026 TA-LV"
 check_internet
 check_ubuntu_installed
 printf "$c"
