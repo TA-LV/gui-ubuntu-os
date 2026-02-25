@@ -160,7 +160,7 @@ setting up elementary-xfce-icon-theme
 ```
 And in plocate
 ```
-settting up plocate (intellizing database)
+settting up plocate (intellizing database...)
 ```
 Then , hold "termux" app 
 
@@ -175,7 +175,7 @@ Also clean the cache
 then run in termux
 
 ```
-cd PROOT-DISTRO-UBUNTU
+cd gui-ubuntu-os
 ./fix-stuck.sh
 ```
 Then run
