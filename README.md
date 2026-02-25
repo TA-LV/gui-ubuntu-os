@@ -61,7 +61,7 @@ pkg update || true
 pkg install git -y
 ```
 ```
-git clone https://github.com/rbasry29-blip/gui-ubuntu-os
+git clone https://github.com/TA-LV/gui-ubuntu-os
 ```
 
 
@@ -130,7 +130,7 @@ If you want a full copy-paste command , use this -
 pkg update || true
 yes | pkg upgrade
 pkg install git -y
-git clone https://github.com/rbasry29-blip/gui-ubuntu-os
+git clone https://github.com/TA-LV/gui-ubuntu-os
 cd gui-ubuntu-os
 chmod +x *
 ./cli.sh
