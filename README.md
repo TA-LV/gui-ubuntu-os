@@ -13,7 +13,7 @@ Run Ubuntu GUI on Android using Termux-X11 🖥️📱
 <img width="1600" height="720" alt="1000011367" src="https://github.com/user-attachments/assets/fe3892ae-e286-46d1-88e3-22795acdf09f" />
 
 
-<center><b>Run ubuntu GUI in easiest way</b></center>
+<center><b>   Run ubuntu GUI in easiest way</b></center>
 
 # 🚀 Features 
 
