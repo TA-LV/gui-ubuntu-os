@@ -150,7 +150,9 @@ proot-distro is an official project maintained by the Termux development team an
 Full credit for proot-distro goes to its original authors and contributors:
 https://github.com/termux/proot-distro
 
+<p style="color:red;"><b>
 This repository does not claim ownership of proot-distro and only uses it as a dependency.
+</b></p>
 
 # Stuck problem
 
