@@ -143,16 +143,23 @@ Enjoy
 Your support keeps the project alive 🚀*
 
 ## Credit
-This project utilizes proot-distro for managing and installing Linux distributions inside Termux.
+<div style="background-color:#ffeded; padding:15px; border-left:6px solid #ff0000; border-right:6px solid #ff0000; border-radius:5px; color:#900; line-height:1.5;">
+<p>
+This project utilizes <b>proot-distro</b> for managing and installing Linux distributions inside Termux.
+</p>
 
-proot-distro is an official project maintained by the Termux development team and is licensed under its respective open-source license.
+<p>
+<em>proot-distro</em> is an official project maintained by the Termux development team and is licensed under its respective open-source license.
+</p>
 
-Full credit for proot-distro goes to its original authors and contributors:
-https://github.com/termux/proot-distro
+<p>
+Full credit for <b>proot-distro</b> goes to its original authors and contributors: <a href="https://github.com/termux/proot-distro">https://github.com/termux/proot-distro</a>
+</p>
 
-<p style="color:red;"><b>
-This repository does not claim ownership of proot-distro and only uses it as a dependency.
-</b></p>
+<p>
+<b>This repository does not claim ownership of proot-distro and only uses it as a dependency.</b>
+</p>
+</div>
 
 # Stuck problem
 
