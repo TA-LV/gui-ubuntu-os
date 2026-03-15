@@ -7,13 +7,53 @@ c='\e[1;96m'   # Light cyan
 bl="\e[1m"     # bold
 red='\e[1;31m' # Red
 
+# Variables
+ubuntu_path="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu"
+storage_path="/data/data/com.termux/files/home/storage"
+script_url="https://github.com/TA-LV/gui-ubuntu-os/releases/download/program/proot-distro"
 
-ubuntu_path="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
+detection() {
 
+  # 1️⃣ Brand Name
+  brand=$(getprop ro.product.brand)
 
-# Color Definitions
+  # 2️⃣ Model
+  model=$(getprop ro.product.model)
 
+  # Friendly Device Name
+  device_name="$brand $model"
 
+  # 3️⃣ Storage used (%)
+  storage_used=$(df -h /data | awk 'NR==2 {print $5}')
+
+  # 4️⃣ Free storage (GB)
+  free_storage=$(df -h /data | awk 'NR==2 {print $4}')
+
+  # 5️⃣ Android version
+  android_ver=$(getprop ro.build.version.release)
+
+  # 6️⃣ CPU architecture
+  cpu_arch=$(uname -m)
+
+  # 7️⃣ Termux version
+  termux_ver=$(cat $PREFIX/version 2>/dev/null || echo "Unknown")
+
+  # 8️⃣ Uptime
+  uptime_info=$(uptime -p | sed 's/up //')
+
+  # Print all detected info in styled box (example)
+  printf "↓══════█▶ D E T E C T E D █▶══════↓\n"
+  printf "${y}• ${g}Bʀᴀɴᴅ           ${c}:${b} %s\n" "$brand"
+  printf "${y}• ${g}Mᴏᴅᴇʟ           ${c}:${b} %s\n" "$model"
+  printf "${y}• ${g}Dᴇᴠɪᴄᴇ Nᴀᴍᴇ     ${c}:${b} %s\n" "$device_name"
+  printf "${y}• ${g}Sᴛᴏʀᴀɢᴇ Uꜱᴇᴅ    ${c}:${b} %s\n" "$storage_used"
+  printf "${y}• ${g}Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ    ${c}:${b} %s\n" "$free_storage"
+  printf "${y}• ${g}Aɴᴅʀᴏɪᴅ Vᴇʀꜱɪᴏɴ ${c}:${b} %s\n" "$android_ver"
+  printf "${y}• ${g}Cᴘᴜ Aʀᴄʜ        ${c}:${b} %s\n" "$cpu_arch"
+  printf "${y}• ${g}Tᴇʀᴍᴜx Vᴇʀꜱɪᴏɴ  ${c}:${b} %s\n" "$termux_ver"
+  printf "${y}• ${g}Dᴇᴠɪᴄᴇ Uᴘᴛɪᴍᴇ   ${c}:${b} %s\n" "$uptime_info"
+  printf "${r}"
+}
 banner() {
     clear
     # Box is exactly 29 characters wide
@@ -64,7 +104,7 @@ spinner() {
     local msg="$1"
     shift
     local cmd="$*"
-    local frames=( "▶───" "─▶──" "──▶─" "───▶" )
+    local frames=( "█■■■■" "██■■■" "███■■" "████■" "█████" )
     local i=0
 
     # Start spinner in background
@@ -157,7 +197,12 @@ spinner "${b}[${g}*${b}]${c} Preparing environment${g}....." "dpkg --configure -
 sleep 1
 
 
-yes | termux-setup-storage
+if [[ -d $storage_path ]] ; then
+printf "${g}•${c}>${y} Storage permission already granted.${r}\n"
+    else
+         yes | termux-setup-storage
+    fi
+
 
 sleep 1
 
@@ -182,7 +227,7 @@ echo \"$USERNAME:$PASSWORD\" | chpasswd
 # Add to sudo group
 usermod -aG sudo \"$USERNAME\"
 "
-printf "${g}█${c}▶${y} User ${c}'$USERNAME' ${y}created and added to sudo group inside Ubuntu.\n"
+printf "\r${g}█${c}▶${y} User ${c}'$USERNAME' ${y}created and added to sudo group inside Ubuntu.\n"
 sleep 3
 banner
 cat > $PREFIX/bin/server << 'EOF'
@@ -200,9 +245,10 @@ EOF
 chmod +x $PREFIX/bin/ubuntu
 }
 banner
-info "Copyright (c) 2026 TA-LV"
-# check_internet
-# check_ubuntu_installed
+detection
+check_internet
+check_ubuntu_installed
+detection
 printf "$c"
 software
 finish
